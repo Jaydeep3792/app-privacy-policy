@@ -13,6 +13,7 @@
             --bg-page: #F8FAFC;
             --bg-card: #FFFFFF;
             --border: #E2E8F0;
+            --accent: #EF4444;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
@@ -42,6 +43,12 @@
             font-weight: 800;
             margin-bottom: 8px;
             line-height: 1.3;
+        }
+        .header .tagline {
+            color: #475569;
+            font-size: 14.5px;
+            margin-bottom: 10px;
+            font-weight: 500;
         }
         .header .meta { color: var(--text-muted); font-size: 14px; }
         h2 {
@@ -74,6 +81,7 @@
             font-weight: 700;
             margin-bottom: 12px;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         .alert-box {
             background-color: #FEF2F2;
@@ -83,6 +91,14 @@
             margin: 20px 0;
         }
         .alert-box p { margin: 0; color: #991B1B; font-weight: 600; font-size: 15px; }
+        .info-box {
+            background-color: #F8FAFC;
+            border: 1px solid var(--border);
+            padding: 16px 20px;
+            border-radius: 10px;
+            margin: 16px 0 20px 0;
+        }
+        .info-box p:last-child { margin-bottom: 0; }
         .footer {
             margin-top: 40px;
             padding-top: 24px;
@@ -96,53 +112,68 @@
     </style>
 </head>
 <body>
-<div class="container">
-    <div class="header">
-        <span class="badge">Safety Policy &amp; Compliance Standards</span>
-        <h1>Standards Against Child Sexual Abuse and Exploitation (CSAE)</h1>
-        <div class="meta">
-            <strong>Application:</strong> JUtility Studio &nbsp;|&nbsp;
-            <strong>Package:</strong> com.aistudio.takehometax.xkpzrl &nbsp;|&nbsp;
-            <strong>Developer:</strong> Jaydeep Shrirang Sannake
+    <div class="container">
+        <div class="header">
+            <span class="badge">Safety Policy &amp; Compliance Standards</span>
+            <h1>Standards Against Child Sexual Abuse and Exploitation (CSAE)</h1>
+            <p class="tagline">Document scanning, file optimization, video downloads, and personal finance&mdash;unified in one studio.</p>
+            <div class="meta">
+                <strong>Application:</strong> JUtility Studio &nbsp;|&nbsp;
+                <strong>Package:</strong> com.aistudio.takehometax.xkpzrl &nbsp;|&nbsp;
+                <strong>Developer:</strong> Jaydeep Shrirang Sannake
+            </div>
+        </div>
+
+        <div class="alert-box">
+            <p><strong>Zero Tolerance Policy:</strong> JUtility Studio strictly prohibits and condemns any form of Child Sexual Abuse Material (CSAM) or Child Sexual Abuse and Exploitation (CSAE). We are committed to maintaining zero tolerance for any activity that harms or endangers minors.</p>
+        </div>
+
+        <h2>1. Policy Overview and Scope</h2>
+        <p>This policy outlines the explicit standards and safeguards enforced by <strong>JUtility Studio</strong>, developed by <strong>Jaydeep Shrirang Sannake</strong>, to prevent and combat Child Sexual Abuse and Exploitation (CSAE) and the creation, storage, or dissemination of Child Sexual Abuse Material (CSAM), in full compliance with Google Play Developer Program Policies, applicable international child protection laws, and human rights frameworks.</p>
+
+        <h2>2. Strict Prohibitions</h2>
+        <p>Users are strictly prohibited from using any feature or tool within JUtility Studio&mdash;including the Document &amp; Receipt Scanner, Offline File Compressor, File Converter (JPG &rlarr; PDF), Youtube Video Downloader, Insta Video Downloader, Loan EMI Calculator, Salary &amp; Tax Planner, or PDF export/share features&mdash;to:</p>
+        <ul>
+            <li>Capture, scan, create, convert, compress, download, store, process, export, or distribute any form of Child Sexual Abuse Material (CSAM) or Child Sexual Exploitation and Abuse (CSAE).</li>
+            <li>Facilitate, promote, solicit, or encourage sexual abuse, grooming, predatory behavior, or sexual exploitation involving minors.</li>
+            <li>Attempt to use any on-device document, image, PDF, or media-handling utility to process, store, or transfer illicit media depicting child endangerment or abuse.</li>
+        </ul>
+
+        <h2>3. Application Overview &amp; Safety-by-Design Architecture</h2>
+        <p><strong>JUtility Studio</strong> is a client-side Android personal productivity, file utility, and financial calculation application comprising seven core utilities:</p>
+        <ul>
+            <li><strong>Document &amp; Receipt Scanner:</strong> CameraX scanning and Android Photo Picker import with interactive corner cropping, rotation, document filters, and multi-page PDF generation saved locally.</li>
+            <li><strong>In-Device File Compressor:</strong> 100% offline compression for JPG, PNG, and PDF files with configurable presets saved locally to the user's Downloads directory.</li>
+            <li><strong>File Converter (JPG &rlarr; PDF):</strong> 100% offline conversion of JPG/JPEG images into A4 or Fit-Image PDF documents and extraction of PDF pages into JPG images.</li>
+            <li><strong>Youtube Video &amp; Insta Video Downloaders:</strong> Client-side personal media utilities that save publicly accessible video streams once into the user's local <code>Downloads</code> directory for offline playback.</li>
+            <li><strong>Loan EMI Calculator &amp; Salary &amp; Tax Planner:</strong> Offline Indian Income Tax (Old vs. New Regime) and Reducing Balance Loan EMI calculations with optional local PDF statement generation.</li>
+        </ul>
+        <div class="info-box">
+            <p><strong>No Social Hosting or User Content Feeds:</strong> All document scanning, file compression, format conversion, and financial calculations execute strictly on-device. JUtility Studio does <strong>not</strong> operate user accounts, social networks, public user profiles, user-to-user messaging or chat features, live-streaming feeds, or cloud/server file-hosting repositories. Downloaded media and exported documents remain solely on the user's own device.</p>
+        </div>
+
+        <h2>4. Reporting and Cooperation with Law Enforcement</h2>
+        <p>We actively cooperate with domestic and international child safety organizations and law enforcement agencies to eradicate child sexual exploitation:</p>
+        <ul>
+            <li><strong>Reporting to Authorities:</strong> If any violation involving CSAM, CSAE, or child endangerment connected to our software is brought to our attention, we review it immediately and report the incident to appropriate global authorities, including the <strong>National Center for Missing &amp; Exploited Children (NCMEC)</strong> and relevant law enforcement agencies.</li>
+            <li><strong>Zero Tolerance Actions:</strong> Any attempt to abuse the application or its services for unlawful conduct will result in immediate termination of access/support and referral to legal authorities.</li>
+        </ul>
+
+        <h2>5. How to Report Violations</h2>
+        <p>If you discover or suspect any violation of our CSAE standards or any instance of child endangerment connected to our software, please report it immediately to our dedicated safety contact:</p>
+        <ul>
+            <li><strong>Safety &amp; Compliance Officer:</strong> Jaydeep Shrirang Sannake</li>
+            <li><strong>Email:</strong> <a href="mailto:Jaydeep.Sannake@gmail.com?subject=[URGENT]%20CSAE%20Report">Jaydeep.Sannake@gmail.com</a></li>
+            <li><strong>Subject Line:</strong> <code>[URGENT] Child Safety Report - JUtility Studio</code></li>
+        </ul>
+        <p>Reports are reviewed with highest priority. You can also report CSAM directly to the National Center for Missing &amp; Exploited Children at <a href="https://report.cybertip.org/" target="_blank" rel="noopener noreferrer">report.cybertip.org</a> or your local law enforcement agency.</p>
+
+        <h2>6. Commitment to Ongoing Review</h2>
+        <p>We review these standards regularly to ensure continuous alignment with global child protection directives, industry best practices, and Google Play safety standards.</p>
+
+        <div class="footer">
+            &copy; 2026 JUtility Studio. Developed by Jaydeep Shrirang Sannake. All rights reserved.
         </div>
     </div>
-
-    <div class="alert-box">
-        <p><strong>Zero Tolerance Policy:</strong> JUtility Studio strictly prohibits and condemns any form of Child Sexual Abuse Material (CSAM) or Child Sexual Abuse and Exploitation (CSAE). We maintain zero tolerance for any activity that harms or endangers minors.</p>
-    </div>
-
-    <h2>1. Policy Overview and Scope</h2>
-    <p>This policy outlines the explicit standards enforced by <strong>JUtility Studio</strong> to prevent and combat Child Sexual Abuse and Exploitation (CSAE) and Child Sexual Abuse Material (CSAM), in full compliance with Google Play Developer Program Policies and international child protection frameworks.</p>
-
-    <h2>2. Strict Prohibitions</h2>
-    <p>Users are strictly prohibited from utilizing any feature of JUtility Studio—including file compression or media utility tools—to:</p>
-    <ul>
-        <li>Create, compress, store, process, transfer, or distribute any form of Child Sexual Abuse Material (CSAM) or Child Sexual Exploitation and Abuse (CSAE).</li>
-        <li>Facilitate, promote, or encourage predatory behavior, grooming, or sexual exploitation involving minors.</li>
-        <li>Attempt to use utility features to process or handle illicit media depicting child endangerment.</li>
-    </ul>
-
-    <h2>3. Nature of the Application</h2>
-    <p>JUtility Studio is an on-device utility application designed for financial calculations (Salary Tax and Loan EMI planning) and client-side device utilities (offline file compression and media utilities). The application does not operate social networks, public user profiles, user-to-user messaging forums, or public hosting repositories.</p>
-
-    <h2>4. Reporting and Law Enforcement Cooperation</h2>
-    <p>We actively cooperate with child safety organizations and law enforcement agencies to eradicate child sexual exploitation:</p>
-    <ul>
-        <li><strong>Reporting to Authorities:</strong> If any violation involving CSAM or child endangerment is brought to our attention, we immediately report the matter to appropriate authorities, including the <strong>National Center for Missing &amp; Exploited Children (NCMEC)</strong> and relevant law enforcement bodies.</li>
-        <li><strong>Zero Tolerance Actions:</strong> Any attempt to abuse the app's services for unlawful conduct will result in immediate termination of access and reporting to legal authorities.</li>
-    </ul>
-
-    <h2>5. How to Report Violations</h2>
-    <p>If you discover or suspect any violation of our CSAE standards connected to our software, report it immediately to our safety contact:</p>
-    <ul>
-        <li><strong>Safety &amp; Compliance Officer:</strong> Jaydeep Shrirang Sannake</li>
-        <li><strong>Email:</strong> <a href="mailto:Jaydeep.Sannake@gmail.com?subject=[URGENT]%20CSAE%20Report">Jaydeep.Sannake@gmail.com</a></li>
-        <li><strong>Direct Law Enforcement Reporting:</strong> You can also report directly to the National Center for Missing &amp; Exploited Children at <a href="https://report.cybertip.org/" target="_blank" rel="noopener noreferrer">report.cybertip.org</a>.</li>
-    </ul>
-
-    <div class="footer">
-        &copy; 2026 JUtility Studio. Developed by Jaydeep Shrirang Sannake. All rights reserved.
-    </div>
-</div>
 </body>
 </html>

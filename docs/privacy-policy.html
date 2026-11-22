@@ -7,6 +7,7 @@
     <style>
         :root {
             --primary: #4F46E5;
+            --primary-dark: #3730A3;
             --text-main: #1E293B;
             --text-muted: #64748B;
             --bg-page: #F8FAFC;
@@ -14,7 +15,11 @@
             --border: #E2E8F0;
             --accent: #10B981;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--bg-page);
@@ -28,7 +33,7 @@
             background: var(--bg-card);
             padding: 40px;
             border-radius: 16px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
             border: 1px solid var(--border);
         }
         .header {
@@ -42,7 +47,16 @@
             font-weight: 800;
             margin-bottom: 8px;
         }
-        .header .meta { color: var(--text-muted); font-size: 14px; }
+        .header .tagline {
+            color: #475569;
+            font-size: 14.5px;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        .header .meta {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
         h2 {
             color: var(--text-main);
             font-size: 20px;
@@ -61,8 +75,20 @@
             background: var(--primary);
             border-radius: 2px;
         }
-        p, li { color: #334155; font-size: 15px; margin-bottom: 12px; }
-        ul { padding-left: 24px; margin-bottom: 20px; }
+        p {
+            margin-bottom: 16px;
+            color: #334155;
+            font-size: 15px;
+        }
+        ul {
+            margin-bottom: 20px;
+            padding-left: 24px;
+        }
+        li {
+            margin-bottom: 8px;
+            color: #334155;
+            font-size: 15px;
+        }
         .badge {
             display: inline-block;
             background: #EEF2FF;
@@ -80,7 +106,11 @@
             border-radius: 8px;
             margin: 20px 0;
         }
-        .highlight-box p { margin: 0; color: #166534; font-weight: 500; }
+        .highlight-box p {
+            margin: 0;
+            color: #166534;
+            font-weight: 500;
+        }
         .footer {
             margin-top: 40px;
             padding-top: 24px;
@@ -89,8 +119,14 @@
             color: var(--text-muted);
             text-align: center;
         }
-        a { color: var(--primary); text-decoration: none; font-weight: 600; }
-        a:hover { text-decoration: underline; }
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -98,56 +134,67 @@
         <div class="header">
             <span class="badge">Official Application Policy</span>
             <h1>Privacy Policy for JUtility Studio</h1>
+            <p class="tagline">Document scanning, file optimization, video downloads, and personal finance&mdash;unified in one studio.</p>
             <div class="meta">
-                <strong>Effective Date:</strong> November 5, 2026 &nbsp;|&nbsp;
-                <strong>Package ID:</strong> com.aistudio.takehometax.xkpzrl
+                <strong>Updated:</strong> November 22, 2026 &nbsp;|&nbsp;
+                <strong>Package ID:</strong> com.aistudio.takehometax.xkpzrl &nbsp;|&nbsp;
+                <strong>Developer:</strong> Jaydeep Shrirang Sannake
             </div>
         </div>
 
         <div class="highlight-box">
-            <p><strong>Summary:</strong> JUtility Studio respects your privacy. All financial calculations (Salary Tax, Loan EMI) and file compression tasks run entirely on your device. We do not sell, transmit, or store your personal or financial data on external servers.</p>
+            <p><strong>Summary:</strong> JUtility Studio respects your privacy. Document scanning, image/PDF conversion, file compression, and financial calculations (Income Tax, Loan EMI) run entirely on your device. We do not sell, transmit, or store your personal or financial data on external servers.</p>
         </div>
 
         <h2>1. Overview</h2>
-        <p>This Privacy Policy explains how <strong>JUtility Studio</strong> ("we", "our", or "the App"), developed by <strong>Jaydeep Shrirang Sannake</strong>, handles information. JUtility Studio provides on-device Salary Tax calculation, Loan EMI planning, offline file compression, and media utility features.</p>
+        <p>This Privacy Policy explains how <strong>JUtility Studio</strong> ("we", "our", or "the App"), developed by <strong>Jaydeep Shrirang Sannake</strong>, handles information when you use our Android application. JUtility Studio is an on-device utility studio providing seven integrated tools: <strong>Document &amp; Receipt Scanner</strong>, <strong>File Compressor</strong>, <strong>File Converter (JPG &rlarr; PDF)</strong>, <strong>Youtube Video Downloader</strong>, <strong>Insta Video Downloader</strong>, <strong>Loan EMI Calculator</strong>, and <strong>Salary &amp; Tax Planner</strong>.</p>
 
         <h2>2. Information Collection and Processing</h2>
-        <p>We practice privacy by design:</p>
+        <p>We believe in data minimization and user privacy by design:</p>
         <ul>
-            <li><strong>Financial and Calculation Inputs:</strong> Any figures you input (basic salary, allowances, HRA, 80C/80D deductions, loan amounts, interest rates) are computed locally on your device in real-time. This information is never transmitted to our servers or third parties.</li>
-            <li><strong>Files and Media:</strong> When using the In-Device File Compressor (JPG, PNG, PDF), files are processed strictly offline using local Android APIs. Your files never leave your device.</li>
-            <li><strong>Downloaded Media:</strong> Media retrieved via the video downloader feature is saved directly to your device's public <code>Downloads</code> folder for your personal access. The app does not log URLs or download history on external servers.</li>
+            <li><strong>Document Scanning &amp; PDF Creation:</strong> Camera captures and gallery images selected in the Scanner are cropped, rotated, filtered, and exported to PDF strictly on your device using Android CameraX and local graphics APIs. No scanned document leaves your device unless you explicitly choose to share it.</li>
+            <li><strong>File Compression &amp; File Conversion:</strong> Files selected in the File Compressor (JPG, PNG, PDF) and File Converter (JPG/JPEG &rlarr; PDF) are processed 100% offline on-device and saved locally to your <code>Downloads</code> directory without network uploads.</li>
+            <li><strong>Financial and Calculation Inputs:</strong> Any figures you input (salary components, HRA, 80C/80D/NPS deductions, loan principals, interest rates, tenure, or optional names for PDF report headers) are processed locally in device memory and exported PDFs. This information is never transmitted to any server.</li>
+            <li><strong>Downloaded Media:</strong> Video links entered in Youtube Video or Insta Video are fetched directly from public media endpoints and saved once to your device's <code>Downloads</code> folder for local playback. The app does not maintain server-side URL logs or user download histories.</li>
         </ul>
 
         <h2>3. Device Permissions Used</h2>
-        <p>The app requests only standard permissions required for core functions:</p>
+        <p>The app requests minimal permissions required strictly to perform its core functions:</p>
         <ul>
-            <li><strong>Internet Access (<code>android.permission.INTERNET</code> &amp; <code>ACCESS_NETWORK_STATE</code>):</strong> Required to check connectivity and fetch user-requested media.</li>
-            <li><strong>Storage / Downloads Access:</strong> Uses Android scoped storage APIs to save downloaded videos and compressed files directly into your standard <code>Downloads</code> directory. We do not read or scan any unrelated files.</li>
+            <li><strong>Camera (<code>android.permission.CAMERA</code>, optional):</strong> Used only when you choose to scan a document or receipt with CameraX in the Scanner tab.</li>
+            <li><strong>Internet Access (<code>android.permission.INTERNET</code> &amp; <code>ACCESS_NETWORK_STATE</code>):</strong> Used strictly to check network connectivity and download video streams requested by the user in Youtube Video and Insta Video.</li>
+            <li><strong>Photo Picker &amp; Scoped Storage (Downloads):</strong> Image and PDF selection uses Android's zero-permission system Photo Picker and Document Picker (no broad media/storage read permissions are requested), and exported PDFs, converted files, compressed files, and downloaded videos are saved to your standard <code>Downloads</code> directory.</li>
         </ul>
 
-        <h2>4. Third-Party Services &amp; Analytics</h2>
-        <p>The application does not use tracking SDKs, data brokers, or advertising profile trackers. Core utilities do not require account registration or cloud sign-in.</p>
+        <h2>4. Third-Party Services and Analytics</h2>
+        <p>The application does not include third-party advertising SDKs, behavioral tracking, data brokers, or user accounts/sign-in requirements.</p>
 
         <h2>5. Data Security</h2>
-        <p>Because all mathematical computations and compression algorithms run within your local Android device sandbox, your sensitive financial inputs and personal documents remain under your control.</p>
+        <p>Because document scanning, file compression, format conversion, and financial calculations execute within your local Android device sandbox, your documents and financial numbers remain strictly under your control.</p>
 
         <h2>6. Children's Privacy</h2>
-        <p>JUtility Studio does not knowingly collect personally identifiable information from children under 13.</p>
+        <p>JUtility Studio does not knowingly collect any personally identifiable information from children under the age of 13. The app is a general productivity and financial utility suite.</p>
 
-        <h2>7. Changes to This Policy</h2>
-        <p>Any updates to this policy will be posted on this page with an updated effective date.</p>
+        <h2>7. Standards Against Child Sexual Abuse and Exploitation (CSAE)</h2>
+        <p>We maintain an absolute zero-tolerance policy against Child Sexual Abuse Material (CSAM) and Child Sexual Abuse and Exploitation (CSAE). Users are strictly prohibited from utilizing the app or any of its tools (including document scanning, compression, conversion, or video downloading) for the creation, processing, storage, or distribution of illicit or abusive content involving minors. For our full standards, law enforcement cooperation procedures, and reporting directives, please review our <a href="csae-standards.html">Standards Against Child Sexual Abuse and Exploitation Policy</a>.</p>
 
-        <h2>8. Contact Us</h2>
-        <p>If you have any questions or feedback regarding this Privacy Policy, please contact:</p>
-        <ul>
-            <li><strong>Developer:</strong> Jaydeep Shrirang Sannake</li>
-            <li><strong>Email:</strong> <a href="mailto:Jaydeep.Sannake@gmail.com">Jaydeep.Sannake@gmail.com</a></li>
-            <li><strong>GitHub:</strong> <a href="https://github.com/Jaydeep3792" target="_blank" rel="noopener noreferrer">https://github.com/Jaydeep3792</a></li>
-        </ul>
+        <h2>8. Changes to This Privacy Policy</h2>
+        <p>We may update our Privacy Policy from time to time. Any changes will be posted on this page with an updated date. You are advised to review this page periodically for any updates.</p>
+
+        <h2>9. Contact Us</h2>
+        <p>If you have any questions, feedback, or safety reports regarding this Privacy Policy, please contact us:</p>
+        <div style="display: flex; align-items: center; gap: 16px; background: #F8FAFC; border: 1px solid var(--border); border-radius: 12px; padding: 16px; margin: 16px 0;">
+            <img src="developer_icon_512.png" alt="Jaydeep Shrirang Sannake" style="width: 72px; height: 72px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary); box-shadow: 0 2px 6px rgba(0,0,0,0.1); flex-shrink: 0;" />
+            <div>
+                <h3 style="margin: 0 0 4px 0; font-size: 17px; color: var(--text-main);">Jaydeep Shrirang Sannake</h3>
+                <p style="margin: 0 0 6px 0; font-size: 13px; color: var(--text-muted);">Creator &amp; Lead Developer &bull; JUtility Studio</p>
+                <p style="margin: 0 0 3px 0; font-size: 14px;"><strong>Email:</strong> <a href="mailto:Jaydeep.Sannake@gmail.com" style="color: var(--primary); text-decoration: none; font-weight: 600;">Jaydeep.Sannake@gmail.com</a></p>
+                <p style="margin: 0; font-size: 13px;"><strong>GitHub:</strong> <a href="https://github.com/Jaydeep3792" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: none;">https://github.com/Jaydeep3792</a></p>
+            </div>
+        </div>
 
         <div class="footer">
-            &copy; 2026 JUtility Studio. All rights reserved.
+            &copy; 2026 JUtility Studio. Developed by Jaydeep Shrirang Sannake. All rights reserved.
         </div>
     </div>
 </body>
